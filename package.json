@@ -1,0 +1,23 @@
+{
+  "name": "react-native-simplest-tab-navigator",
+  "version": "0.0.1",
+  "description": "The simplest tab navigator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pikaurd/react-native-simplest-tab-navigator.git"
+  },
+  "keywords": [
+    "react-native",
+    "tab"
+  ],
+  "author": "Pikaurd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Pikaurd/react-native-simplest-tab-navigator/issues"
+  },
+  "homepage": "https://github.com/Pikaurd/react-native-simplest-tab-navigator#readme"
+}
