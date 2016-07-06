@@ -19,13 +19,11 @@ class SceneContainer extends Component {
 
   shouldComponentUpdate(nextProps): boolean {
     let isNeedUpdate = (this.props.isSelected ^ nextProps.isSelected) == true;
-    console.log(`${this.props.children.props.title} shouldComponentUpdate? ${isNeedUpdate}`);
     return isNeedUpdate;
   }
 
   render() {
     let { children } = this.props; // check only one children
-    console.log('Scene style: ', this.props.isSelected);
     return (
       <View
         style={[
