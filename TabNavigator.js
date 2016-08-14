@@ -11,12 +11,20 @@ import SceneContainer from './SceneContainer';
 import TabItem from './TabItem';
 import TabBar from './TabBar';
 
+type Props = {
+  sceneStyle: View.propTypes.style,
+  tabBarHeight: number,
+}
+
 class TabNavigator extends Component {
-  static propTypes = {
-    ...View.propTypes,
-    sceneStyle: View.propTypes.style,
-    tabBarHeight: PropTypes.number.isRequired,
-  };
+  constructor(props: Props) {
+    super(props);
+  }
+  // static propTypes = {
+  //   ...View.propTypes,
+  //   sceneStyle: View.propTypes.style,
+  //   tabBarHeight: PropTypes.number.isRequired,
+  // };
 
   render() {
     let { style, children, sceneStyle, tabBarHeight, ...props } = this.props;
@@ -51,7 +59,7 @@ class TabNavigator extends Component {
 
   // MARK: - helper methods
 
-  _getSceneKey(item, index): string {
+  _getSceneKey(item: TabItem, index: number): string {
     return `scene-${(item.key !== null) ? item.key : index}`;
   }
 

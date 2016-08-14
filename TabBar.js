@@ -8,13 +8,12 @@ import {
   View,
 } from 'react-native';
 
-class TabBar extends Component {
-  static propTypes = {
-    ...View.propTypes,
-    height: PropTypes.number,
-  };
+type Props = {
+  height: number,
+}
 
-  constructor(props) {
+class TabBar extends Component {
+  constructor(props: Props) {
     super(props);
   }
 

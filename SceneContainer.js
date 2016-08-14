@@ -7,18 +7,17 @@ import {
   StyleSheet,
 } from 'react-native';
 
-class SceneContainer extends Component {
-  static propTypes = {
-    ...View.propTypes,
-    isSelected: PropTypes.bool
-  };
+type Props = {
+  isSelected: boolean,
+}
 
-  constructor(props) {
+class SceneContainer extends Component {
+  constructor(props: Props) {
     super(props);
   }
 
-  shouldComponentUpdate(nextProps): boolean {
-    let isNeedUpdate = (this.props.isSelected ^ nextProps.isSelected) == true;
+  shouldComponentUpdate(nextProps: Props): boolean {
+    let isNeedUpdate = Boolean(Number(this.props.isSelected) ^ Number(nextProps.isSelected));
     return isNeedUpdate;
   }
 
