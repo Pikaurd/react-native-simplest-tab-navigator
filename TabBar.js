@@ -3,11 +3,11 @@
 import React, { Component, PropTypes } from 'react';
 import {
   Animated,
+  Dimensions,
   Platform,
   StyleSheet,
   View,
 } from 'react-native'
-import Dimensions from 'Dimensions'
 
 type Props = {
   height: number,
