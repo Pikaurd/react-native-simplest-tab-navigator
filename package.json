@@ -1,6 +1,6 @@
 {
   "name": "react-native-simplest-tab-navigator",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "The simplest tab navigator",
   "main": "index.js",
   "scripts": {

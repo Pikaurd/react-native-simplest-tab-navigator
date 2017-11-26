@@ -3,6 +3,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import {
+  Dimensions,
   View,
   StyleSheet,
 } from 'react-native';
@@ -10,6 +11,8 @@ import {
 import SceneContainer from './SceneContainer';
 import TabItem from './TabItem';
 import TabBar from './TabBar';
+
+const IPhoneX = Dimensions.get('window').height === 812
 
 type Props = {
   sceneStyle: View.propTypes.style,
@@ -20,11 +23,6 @@ class TabNavigator extends Component {
   constructor(props: Props) {
     super(props);
   }
-  // static propTypes = {
-  //   ...View.propTypes,
-  //   sceneStyle: View.propTypes.style,
-  //   tabBarHeight: PropTypes.number.isRequired,
-  // };
 
   render() {
     let { style, children, sceneStyle, tabBarHeight, ...props } = this.props;
@@ -38,7 +36,7 @@ class TabNavigator extends Component {
         <SceneContainer
           key={sceneKey}
           isSelected={selected}
-          style={[sceneStyle, {bottom: tabBarHeight}]}
+          style={[sceneStyle, {bottom: IPhoneX ? tabBarHeight + 34 : tabBarHeight }]}
         >
           {item.props.view}
         </SceneContainer>;
